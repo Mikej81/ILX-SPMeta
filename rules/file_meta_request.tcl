@@ -23,6 +23,10 @@ set spreqOptions {}
  #Currently this is using GetFileByServerRelativeUrl(), can be changed to other 
  #SP Web Service Function.
  append spreqOptions "\"filename\":  \"/Shared%20Documents/Security%20in%20Office%20365%20Whitepaper.docx\","
+ ##Determine if OneDrive or SharePoint option: onedrive / sharepoint
+ append spreqOptions "\"application\": \"sharepoint\"" 
+ #if querying OneDrive you submit ObjectID
+ append spreqOptions "\"fileid\": \"8675309\""
  append spreqOptions "}"
  
 set rpc_handle [ILX::init file_meta_extension]
@@ -38,5 +42,6 @@ if { [$rcp_response contains "classified"]} {
 }
 
 }
+
 
 

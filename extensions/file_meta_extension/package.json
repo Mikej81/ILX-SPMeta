@@ -10,9 +10,8 @@
     "node": "0.11.12"
   },
   "dependencies": {
-    "edge": "^6.5.1",
     "f5-nodejs": "0.0.3",
-    "sp-request": "^2.0.3",
-    "spo-auth": "^1.0.6"
+    "onedrive-api": "0.0.9",
+    "sp-request": "^2.0.3"
   }
 }
